@@ -4,11 +4,22 @@
     font-family: Roboto;
     color: #1F3F68;
 }
+.container{
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 113px;
+}
+.topcase{
+    display: flex;
+    flex-direction: column;
+    height: 768px;
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);    
+}
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 113px;
 }
 .mainpage{
     padding-top: 34px;
@@ -16,16 +27,12 @@
 .contacts{
     padding-top: 39px;
 }
-.topcase{
-    display: flex;
-    flex-direction: column;
-    height: 768px;
-    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
-}
-.centralblock{
+.background{
+    flex-grow: 1;
     background-image: url(../img/illustration.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom 60px right 80px;
+    background-size: 45%;
 }
 .greetinfo{
     align-items: center;
@@ -48,6 +55,7 @@
     margin-bottom: 71px;
 }
 .index_button{
+    text-decoration: none;
     background: #5A98D0;
     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
     border-radius: 10px;
@@ -66,7 +74,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .project1, .project2, .project3{
     display: flex;
@@ -101,14 +108,7 @@
     line-height: 46px;
     text-align: center;
     letter-spacing: 0.05em;
-    min-width: 100%;
     margin: 64px 0;
-}
-.container{
-    width: 1140px !important;
-    display: flex;
-    flex-direction: column;
-    padding-left: 113px;
 }
 .image2{
     background-image: url(../img/Group\ 15.svg);
@@ -126,7 +126,7 @@
 }
 .linkbox{
     display: flex;
-    -ms-flex-align: center;
+    flex-direction: row;
     color: #5A98D0;
     padding-left: 32px;
     padding-bottom: 44px;
@@ -135,6 +135,8 @@
     text-decoration: none;
     color: #5A98D0;
     letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
 }
 .link_arrow{
     padding-left: 20px;
@@ -154,27 +156,27 @@
     margin-bottom: 32px;
 }
 .project_text{
-    justify-content: center;
     max-width: 750px;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.05em;
     color: #222222;
+    margin-bottom: 64px;
 }
 .smarthome{
     background-image: url(../img/Mask\ Group.png);
     display: flex;
-    width: 100vw;
-    max-width: 1140px;
-    height: 100vh;
-    max-height: 480px;
+    max-width: 100vw;
+    height: 480px;
     justify-content: right;
-    margin-top: 64px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
     padding-left: 0px;
 }
-
+.link_pic {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 .link_SHI{
     text-decoration: none;
 }
@@ -194,7 +196,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 0px;
+    max-width: 100vw;
     margin-bottom: 112px;
 }
 .spark{
@@ -231,31 +233,34 @@
     display: flex;
     flex-direction: column;
 }
-.list{
+.footer_text{
     display: flex;
     justify-content: space-between;
-    padding-left: 32px;
-
 }
-.list li{
-    list-style: none;
-    float: left;
+.footer_elem {
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-}.footer{
+    opacity: 1;
+}
+.footer{
     border-top: 1px solid black;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: #316099;
 }
+.footer_talk{
+    flex-grow: 1;
+    align-items: center;
+}
 .contact_us{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 .text_c_us{
     flex-direction: column;
@@ -282,7 +287,7 @@
     display: flex;
     text-decoration: none;
     background: #5A98D0;
-    margin-top: 180px;
+    margin-top: 165px;
     text-decoration: none;
     align-items: center;
     padding: 15px 80px;
@@ -300,10 +305,10 @@
 .footer_contacts{
     padding-top: 64px;
     justify-content: space-between;
+    flex-grow: 1;
 }
 .border{
-    opacity: 0.4;
-    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     width: 100%;
 }
 .rights p{
@@ -316,4 +321,46 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
     opacity: 0.4;
+}
+@media (max-width: 768px) {
+    .container{
+        padding: 0 32px;
+        max-width: 704px;
+    }
+    .projects{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .project1, .project2, .project3{
+        margin-top: 32px;
+    }
+    .project_text{
+        max-width: 520px;
+    }
+    .smarthome {
+        height: 300px;
+    }
+    .spark, .car {
+        max-width: 336px;
+        max-height: 253px;
+    }
+    .text_c_us {
+        max-width: 336px;
+    }
+    .chat_button {
+        padding: 0 5px;
+    }
+    .contact_us {
+        max-width: 520px;
+    }
+    .footer_contacts {
+        padding-left: 125px;
+    }
+    .footer_text {
+        flex-direction: column;
+        align-items: left;
+    }
+    .footer_elem {
+        margin-top: 25px;
+    }
 }
