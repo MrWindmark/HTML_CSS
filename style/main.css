@@ -221,6 +221,7 @@
 }
 .car, .spark {
     display: flex;
+    justify-content: right;
 }
 .spark{
     background-image: url(../img/spark.png);
@@ -262,7 +263,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-sizing: content-box;
+    box-sizing: border-box;
     flex-grow: 1;
 }
 .footer_elem {
@@ -278,10 +279,13 @@
     flex-direction: column;
     align-items: center;
 }
-.footer_talk{
-    flex-grow: 1;
+.footer_center {
     display: flex;
-    align-items: center;
+    align-self: center;
+}
+.footer_talk{
+    width: 1140px;
+    display: flex;
 }
 .contact_us{
     display: flex;
@@ -332,8 +336,7 @@
 }
 .footer_contacts{
     padding-top: 64px;
-    justify-content: center;
-    align-self: stretch;
+    width: 1140px;
 }
 .border{
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -371,7 +374,6 @@
         padding: 0 5px;
     }
     .contact_us {
-        max-width: 520px;
         flex-grow: 1;
     }
     .footer_contacts {
@@ -416,7 +418,6 @@
         padding: 0 5px;
     }
     .contact_us {
-        max-width: 520px;
         flex-grow: 1;
     }
     .footer_contacts {
@@ -447,7 +448,6 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        
     }
     .index_h1 {
         font-size: 32px;
@@ -457,7 +457,81 @@
         font-size: 16px;
         line-height: 26px;
     }
+    .speech_and_lists {
+        font-size: 24px;
+        line-height: 28px;
+        color: black;
+    }
+    .projects{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .project1, .project2, .project3{
+        margin-top: 32px;
+    }
+    .project2 {
+        margin: 32px 0 0 0;
+    }
+    .plates {
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .SHI, .snc_text {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: right;
+        padding: 16px 16px 0 0;
+    } 
+    .spark_n_car {
+        flex-direction: column;
+    }
+    .snc_link {
+        width: 90vw;
+    }
+    .smarthome {
+        width: 90vw;
+        height: 40vw;
+        padding-bottom: 0;
+    }
+    .car, .spark {
+        margin: 0;
+        max-width: 90vw;
+        height: 70vw;
+    }
+    .contact_us {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .cont_us_h {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .cont_us_text {
+        padding-bottom: 40px;
+    }
+    .chat_button {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .footer_contacts {
+        width: auto;
+    }
+    .footer_text {
+        flex-direction: column;
+        padding: 32px 0 0 0;
+    }
     .footer_elem {
         line-height: 19px;
+        padding-bottom: 18px;
+    }
+    .footer {
+        align-items: normal;
+    }
+    .rights {
+        align-self: center;
+    }
+    .rights p {
+        padding: 32px 0;
     }
 }
