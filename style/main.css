@@ -5,7 +5,8 @@
     color: #1F3F68;
 }
 .center{
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -24,13 +25,13 @@
 }
 .topcase{
     display: flex;
-    height: 768px;
     flex-grow: 1;
 }
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-width: 320px;
 }
 .mainpage{
     padding-top: 34px;
