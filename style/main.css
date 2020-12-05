@@ -5,8 +5,7 @@
     color: #1F3F68;
 }
 .center{
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -17,6 +16,120 @@
     flex-direction: column;
     padding: 0 113px;
 }
+.main_padding {
+    padding: 0 212px;
+    width: 70vw;
+    display: flex;
+    align-self: center;
+}
+.main_info {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message_box {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    min-width: 70vw;
+    margin: 56px 0 96px 0;
+}
+.contacts_text, .message_us {
+    padding: 64px 0;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.message_us {
+    background: #FFFFFF ;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 540px;
+}
+.subbox {
+    padding: 0 56px;
+}
+.form {
+    width: 100%;
+}
+.form_text {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+}
+.form_text {
+    margin-top: 32px;
+}
+.data_input, .data_input_mbox {
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+.data_input {
+    width: 100%;
+    height: 72px;
+}
+.data_input_mbox {
+    height: 144px;
+}
+.contacts_button {
+    display: flex;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+}
+.contacts_button p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+.contacts_text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+}
+.h2_contacts {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+}
+.p_text, .opacity_text{
+    display: block;
+    opacity: 0.6;
+    list-style-type: none;
+    text-decoration: none;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+}
+.adress, .phone, .online_services {
+    max-width: 300px;
+}
+.yandex_map {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 112px;
+}
 .top_background {
     background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
     width: 100%;
@@ -25,15 +138,56 @@
 }
 .topcase{
     display: flex;
+    flex-direction: column;
+    min-height: 768px;
     flex-grow: 1;
+    width: 100vw;
 }
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-width: 320px;
 }
-.mainpage{
+.header_puddings {
+    padding: 38px 113px;
+}
+.mainwords {
+    background-image: url(../img/contact_us_bcg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mainwords_paddings {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+.text_style_h1 {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 168%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+.text_style {
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+.mainwords_h1 {
+    align-self: center;
+    max-width: 780px;
+}
+.mainpage, .contacts_header{
+    display: flex;
+    align-items: center;
     padding-top: 34px;
 }
 .contacts{
@@ -324,6 +478,7 @@
     text-decoration: none;
     align-items: center;
     padding: 15px 80px;
+    border-radius: 5px;
 }
 .chat_button p{
     font-size: 16px;
@@ -356,7 +511,7 @@
     color: #FFFFFF;
     opacity: 0.4;
 }
-@media (min-width: 1141px) and (max-width: 1336px) {
+@media (min-width: 1141px) and (max-width: 1366px) {
     .container{
         padding: 0 32px;
         max-width: 704px;
@@ -372,7 +527,7 @@
         max-width: 336px;
     }
     .chat_button {
-        padding: 0 5px;
+        padding: 5px 15px;
     }
     .contact_us {
         flex-grow: 1;
@@ -391,6 +546,9 @@
     .container{
         padding: 0 32px;
         max-width: 704px;
+    }
+    .header_puddings {
+        padding: 10px 32px;
     }
     .projects{
         flex-direction: column;
@@ -416,7 +574,8 @@
         max-width: 336px;
     }
     .chat_button {
-        padding: 0 5px;
+        padding: 5px 15px;
+        border-radius: 2px;
     }
     .contact_us {
         flex-grow: 1;
@@ -430,8 +589,24 @@
     .footer_elem {
         margin-top: 25px;
     }
+    .main_padding {
+        padding: 0 112px;
+    }
+    .message_box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts, .message_us {
+        min-width: inherit;
+    }
+    .contacts {
+        align-items: center;
+    }
 }
 @media (max-width: 768px) {
+    .topcase {
+        min-height: 768px;
+    }
     .container {
         padding: 0 15px;
         max-width: 100vw;
@@ -439,7 +614,10 @@
     .header {
         padding: 16px;
     }
-    .mainpage, .contacts {
+    .header_puddings {
+        padding: 10px 16px;
+    }
+    .mainpage, .contacts_header {
         padding-top: 0px;
     }
     .background {
@@ -507,13 +685,15 @@
     .cont_us_h {
         font-size: 24px;
         line-height: 28px;
+        align-self: center;
     }
     .cont_us_text {
         padding-bottom: 40px;
     }
     .chat_button {
-        margin-top: 0;
-        margin-bottom: 40px;
+        margin: 65px 0;
+        padding: 5 10px;
+        border-radius: 5px;
     }
     .footer_contacts {
         width: auto;
@@ -534,5 +714,37 @@
     }
     .rights p {
         padding: 32px 0;
+    }
+    .mainwords {
+        margin-top: 30px;
+    }
+    .main_padding {
+        padding: 0 112px;
+        width: 100vw;
+    }
+    .message_box {
+        flex-direction: column;
+        align-items: center;
+        width: inherit;
+        margin: 46px 0 32px 0;
+    }
+    .message_us {
+        padding: 32px 0;
+    }
+    .contacts, .message_us {
+        min-width: inherit;
+        width: 90%;
+    }
+    .contacts {
+        align-items: center;
+    }
+    .contacts_text {
+        padding: 32px 0;
+    }
+    .form_text {
+        margin-top: 21px;
+    }
+    .yandex_map {
+        margin-bottom: 32px;
     }
 }
